@@ -1,18 +1,5 @@
-// HTML
-const btnRandom = document
-  .querySelector("#btn-random")
-  .addEventListener("click", randomiser);
+// ARRAYS
 
-const btnCopy = document
-  .querySelector("#btn-copy")
-  .addEventListener("click", () => {
-    textArea.select();
-    document.execCommand("copy");
-  });
-
-const textArea = document.querySelector("textarea");
-
-// ARRAY
 const tracks = [
   {
     name: "el_add=bigstadium_demolition_arena",
@@ -599,6 +586,20 @@ const tracks = [
 
 const tracksRandomised = [...tracks];
 
+// HTML
+const btnRandom = document
+  .querySelector("#btn-random")
+  .addEventListener("click", randomiser);
+
+const btnCopy = document
+  .querySelector("#btn-copy")
+  .addEventListener("click", () => {
+    textArea.select();
+    document.execCommand("copy");
+  });
+
+const textArea = document.querySelector("textarea");
+
 // FUNCTIONS
 function randomiser() {
   //GO RANDOM !
@@ -618,7 +619,6 @@ function randomiser() {
 ${track.name}
 ${track.type}
 ${track.weather}
-${track.laps === undefined ? "" : `${track.laps}`}
-`;
+${track.laps === undefined ? "" : `${track.laps}`}`;
   });
 }
