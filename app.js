@@ -619,6 +619,11 @@ function randomiser() {
 ${track.name}
 ${track.type}
 ${track.weather}
-${track.laps === undefined ? "" : `${track.laps}`}`;
+${
+  track.laps === undefined
+    ? ""
+    : `${track.laps}
+`
+}`;
   });
 }
